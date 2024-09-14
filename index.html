@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Natació</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Importamos Roboto Bold */
+
+        body {
+            font-family: 'Roboto', sans-serif; /* Cambiamos a Roboto */
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #C2CB76; /* Color verde */
+            overflow: hidden;
+            height: 20px; /* Ajustamos altura */
+            display: flex;
+            align-items: center;
+        }
+        .navbar a {
+            font-weight: bold; /* Roboto en negrita */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 18px; /* Ajustamos espaciado */
+            text-decoration: none;
+            font-size: 10px; /* Tamaño de texto */
+            position: relative;
+        }
+        .navbar img {
+            width: 55px; /* Tamaño por defecto para todas las imágenes */
+            height: 24px;
+            object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+            vertical-align: middle;
+        }
+        /* Ajuste específico para la imagen de Google */
+        .navbar img.google {
+            width: 90px; /* Aumenta el tamaño solo para Google */
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%); /* Centrado vertical */
+            width: 1px; /* Ancho de la barra */
+            height: 40%; /* Altura de la barra, centrada */
+            background-color: white; /* Color blanco */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        .navbar a:last-child::after {
+            display: none; /* No mostramos la barra en el último botón */
+        }
+        .navbar a:hover {
+            background-color: #218838; /* Color verde oscuro al pasar el ratón */
+            color: white;
+        }
+        .navbar a.active {
+            background-color: #1e7e34;
+            color: white;
+        }
+
+        /* Para alinear los botones de imágenes a la derecha */
+        .navbar .image-buttons {
+    margin-left: auto; /* Empuja los botones de imagen hacia la derecha */
+    display: flex;
+    gap: 0; /* Elimina el espaciado entre los botones */
+}
+
+.navbar .image-buttons a {
+    margin: 0; /* Elimina cualquier margen alrededor de los enlaces */
+    padding: 0; /* Elimina cualquier padding en los enlaces */
+}
+
+.navbar .image-buttons img {
+    margin: 0; /* Elimina márgenes en las imágenes */
+    padding: 0; /* Elimina padding en las imágenes */
+    width: 30px; /* Ajusta el tamaño de los iconos si es necesario */
+    height: 15px;
+}
+
+        /* Eliminamos la barra entre los botones de redes sociales */
+        .navbar .image-buttons a::after {
+            display: none; /* Eliminamos la barra blanca para los botones de redes sociales */
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#noticies">NOTICIES</a>
+        <a href="#contacte">CONTACTE</a>
+        <a href="#feste-soci">FES-TE SOCI</a>
+        <a href="#faqs">FAQs</a>
+        
+        <!-- Botones de imagen alineados a la derecha -->
+        <div class="image-buttons">
+            <a href="#facebook">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="#instagram">
+                <img src="images/insta.png" alt="Instagram">
+            </a>
+            <a href="#tiktok">
+                <img src="images/TikTok.png" alt="Tiktok">
+            </a>
+            <a href="#youtube">
+                <img src="images/youtube.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenido de ejemplo -->
+    <div class="content">
+        <h1>Benvingut al Club de Natació!</h1>
+        <p>Aquí podràs trobar tota la informació sobre el nostre club.</p>
+    </div>
+
+</body>
+</html>
