@@ -12,6 +12,8 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Barra de navegación original */
         .navbar {
             background-color: #C2CB76; /* Color verde */
             overflow: hidden;
@@ -19,6 +21,7 @@
             display: flex;
             align-items: center;
         }
+
         .navbar a {
             font-weight: bold; /* Roboto en negrita */
             display: block;
@@ -29,13 +32,14 @@
             font-size: 10px; /* Tamaño de texto */
             position: relative;
         }
+
         .navbar img {
             width: 55px; /* Tamaño por defecto para todas las imágenes */
             height: 24px;
             object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
             vertical-align: middle;
         }
-        /* Ajuste específico para la imagen de Google */
+
         .navbar img.google {
             width: 90px; /* Aumenta el tamaño solo para Google */
         }
@@ -51,72 +55,138 @@
             background-color: white; /* Color blanco */
             border-radius: 10px; /* Bordes redondeados */
         }
+
         .navbar a:last-child::after {
             display: none; /* No mostramos la barra en el último botón */
         }
+
         .navbar a:hover {
-            background-color: #218838; /* Color verde oscuro al pasar el ratón */
+            background-color: #C2CB76; /* Color verde oscuro al pasar el ratón */
             color: white;
         }
+
         .navbar a.active {
             background-color: #1e7e34;
             color: white;
         }
 
-        /* Para alinear los botones de imágenes a la derecha */
         .navbar .image-buttons {
-    margin-left: auto; /* Empuja los botones de imagen hacia la derecha */
-    display: flex;
-    gap: 0; /* Elimina el espaciado entre los botones */
-}
+            margin-left: auto;
+            display: flex;
+            gap: 0;
+        }
 
-.navbar .image-buttons a {
-    margin: 0; /* Elimina cualquier margen alrededor de los enlaces */
-    padding: 0; /* Elimina cualquier padding en los enlaces */
-}
+        .navbar .image-buttons a {
+            margin: 0;
+            padding: 0;
+        }
 
-.navbar .image-buttons img {
-    margin: 0; /* Elimina márgenes en las imágenes */
-    padding: 0; /* Elimina padding en las imágenes */
-    width: 30px; /* Ajusta el tamaño de los iconos si es necesario */
-    height: 15px;
-}
+        .navbar .image-buttons img {
+            margin: 0;
+            padding: 0;
+            width: 30px;
+            height: 15px;
+        }
 
-        /* Eliminamos la barra entre los botones de redes sociales */
         .navbar .image-buttons a::after {
             display: none; /* Eliminamos la barra blanca para los botones de redes sociales */
         }
 
-        .content {
-            padding: 20px;
+        /* Nueva barra de navegación grande */
+        .navbar-large {
+            background-color: #6AA84F; /* Verde más oscuro */
+            overflow: hidden;
+            height: 55px; /* Barra más alta */
+            display: flex;
+            align-items: center;
+            justify-content: space-around; /* Espacio uniforme entre botones */
         }
+
+        .navbar-large a {
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px; /* Texto más grande */
+        }
+
+        .navbar-large img {
+            width: 160px; /* Ajustamos tamaño de la imagen del título CNC */
+            height: auto;
+            transform: translateY(5%);
+        }
+
+        .navbar-large a:hover {
+            background-color: #38761D; /* Color más oscuro al pasar el ratón */
+            color: white;
+        }
+
+        /* Estilos para la imagen debajo de la barra de navegación */
+        .header-image {
+            width: 100%; /* La imagen ocupa todo el ancho */
+            height: auto; /* Mantiene las proporciones */
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo-ajuntament {
+    width: 50px; /* Ajusta el ancho como desees */
+    height: 50px; /* Mantiene las proporciones */
+}
+
     </style>
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <div class="navbar">
-        <a href="#noticies">NOTICIES</a>
-        <a href="#contacte">CONTACTE</a>
-        <a href="#feste-soci">FES-TE SOCI</a>
-        <a href="#faqs">FAQs</a>
-        
-        <!-- Botones de imagen alineados a la derecha -->
-        <div class="image-buttons">
-            <a href="#facebook">
-                <img src="images/facebook.png" alt="Facebook">
-            </a>
-            <a href="#instagram">
-                <img src="images/insta.png" alt="Instagram">
-            </a>
-            <a href="#tiktok">
-                <img src="images/TikTok.png" alt="Tiktok">
-            </a>
-            <a href="#youtube">
-                <img src="images/youtube.png" alt="YouTube">
-            </a>
-        </div>
+    <!-- Barra de navegación original -->
+    <!-- Barra de navegación original -->
+<div class="navbar">
+    <a href="#noticies">NOTICIES</a>
+    <a href="#contacte">CONTACTE</a>
+    <a href="#feste-soci">FES-TE SOCI</a>
+    <a href="#faqs">FAQs</a>
+
+    <!-- Botones de imagen después del botón FAQs -->
+    <a href="#otro-boton">
+        <img src="images/APPLE.png" alt="Otro botón">
+    </a>
+    <a href="#google">
+        <img src="images/google.png" alt="Google" class="google">
+    </a>
+    
+
+    <!-- Botones de imagen alineados a la derecha -->
+    <div class="image-buttons">
+        <a href="#facebook">
+            <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="#instagram">
+            <img src="images/insta.png" alt="Instagram">
+        </a>
+        <a href="#tiktok">
+            <img src="images/TikTok.png" alt="Tiktok">
+        </a>
+        <a href="#youtube">
+            <img src="images/youtube.png" alt="YouTube">
+        </a>
     </div>
+</div>
+
+
+    <!-- Nueva barra de navegación grande -->
+    <div class="navbar-large">
+        <a href="#"><img src="images/TituloCNC.png" alt="Logo"></a> <!-- Primer botón con imagen -->
+        <a href="#section1">INICI</a>
+        <a href="#section2">CLUB</a>
+        <a href="#section3">CATEGORIES</a>
+        <a href="#section4">ESCOLA</a>
+        <a href="#section5">SPONSORS</a>
+        <a href="#"><img src="images/LogoAjuntament.png" alt="Logo Ajuntament" class="logo-ajuntament"></a> 
+    </div>
+
+    <!-- Imagen debajo de la barra de navegación -->
+    <img src="images/Bienvenida.jpg" alt="Imagen principal" class="header-image">
 
     <!-- Contenido de ejemplo -->
     <div class="content">
