@@ -140,7 +140,7 @@
             border-radius: 20px;
             display: flex;
             justify-content: space-around;
-            align-items: center; /* Centrar imágenes y texto verticalmente */
+            align-items: center;
             margin: 20px auto;
             padding: 0;
         }
@@ -177,7 +177,7 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 1.2;
-            text-align: center; /* Cambiado para centrar el texto */
+            text-align: center;
         }
 
         .image-container p:first-child {
@@ -185,6 +185,41 @@
             font-size: 14px;
         }
 
+        .title-text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            color: #77A21F;
+            margin-bottom: 30px; /* Ajustar este valor para controlar el margen */
+        }
+
+        /* Imagen que ocupa todo el ancho de la pantalla */
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Contenedor para la imagen y los botones */
+        .image-with-buttons {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Botones (imágenes) que estarán encima de la imagen */
+        .image-with-buttons .button {
+            position: absolute;
+            top: 320px; /* Puedes ajustar este valor */
+            width: 300px; /* Ajustar tamaño del botón */
+            height: auto;
+        }
+
+        .button1 {
+            left: 150px;
+        }
+
+        .button2 {
+            right: 400px;
+        }
     </style>
 </head>
 <body>
@@ -196,24 +231,24 @@
         <a href="#feste-soci">FES-TE SOCI</a>
         <a href="#faqs">FAQs</a>
 
-        <a href="#otro-boton">
+        <a href="https://www.apple.com/es/app-store/" target="_blank">
             <img src="images/APPLE.png" alt="Otro botón">
         </a>
-        <a href="#google">
+        <a href="https://play.google.com/store/games?hl=es" target="_blank">
             <img src="images/google.png" alt="Google" class="google">
         </a>
 
         <div class="image-buttons">
-            <a href="#facebook">
+            <a href="https://www.facebook.com/cncornella?locale=es_ES" target="_blank">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
-            <a href="#instagram">
+            <a href="https://www.instagram.com/cncornella/" target="_blank">
                 <img src="images/insta.png" alt="Instagram">
             </a>
-            <a href="#tiktok">
+            <a href="https://www.tiktok.com/@clubnataciocornella" target="_blank">
                 <img src="images/TikTok.png" alt="Tiktok">
             </a>
-            <a href="#youtube">
+            <a href="https://www.youtube.com/@cncornella7480" target="_blank">
                 <img src="images/youtube.png" alt="YouTube">
             </a>
         </div>
@@ -227,7 +262,7 @@
         <a href="#section3">CATEGORIES</a>
         <a href="#section4">ESCOLA</a>
         <a href="#section5">SPONSORS</a>
-        <a href="#"><img src="images/LogoAjuntament.png" alt="Logo Ajuntament" class="logo-ajuntament"></a>
+        <a href="https://www.cornella.cat/" target="_blank"><img src="images/LogoAjuntament.png" alt="Logo Ajuntament" class="logo-ajuntament"></a>
     </div>
 
     <!-- Imagen debajo de la barra de navegación -->
@@ -250,6 +285,25 @@
             <p><b>Sortides</b></p>
             <p>Al llarg de la temporada realitzem sortides i activitats que uneixen les categories més petites amb les categories més grans, creant una família.</p>
         </div>
+    </div>
+
+    <!-- Texto y descarga de app -->
+    <div class="title-text">
+        <h2>DESCARREGA'T L'APP!</h2>
+    </div>
+
+    <!-- Contenedor para la imagen y los botones -->
+    <div class="image-with-buttons">
+        <img src="images/Descarrega't.png" alt="Imagen de la App" class="full-width-image">
+
+        <!-- Botones encima de la imagen -->
+         <a href="https://play.google.com/store/games?hl=es" target="_blank">
+        <img src="images/GooglePlay_Button.png" alt="Botón 1" class="button button1">
+    </a>
+
+    <a href="https://www.apple.com/es/app-store/" target="_blank"></ahref>>
+        <img src="images/AppleStore_Button.png" alt="Botón 2" class="button button2">
+    </a>
     </div>
 
 </body>
