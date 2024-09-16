@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #EBFFE4;
+        }
+
+        .navbar {
+            background-color: #C2CB76;
+            overflow: visible; /* Cambiado a visible */
+            height: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            font-weight: bold;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 18px;
+            text-decoration: none;
+            font-size: 10px;
+            position: relative;
+        }
+
+        .navbar img {
+            width: 55px;
+            height: 24px;
+            object-fit: contain;
+            vertical-align: middle;
+        }
+
+        .navbar img.google {
+            width: 90px;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 40%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .navbar a:last-child::after {
+            display: none;
+        }
+
+        .navbar a:hover {
+            background-color: #C2CB76;
+            color: white;
+        }
+
+        .navbar a.active {
+            background-color: #1e7e34;
+            color: white;
+        }
+
+        .navbar .image-buttons {
+            margin-left: auto;
+            display: flex;
+            gap: 0;
+        }
+
+        .navbar .image-buttons a {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .image-buttons img {
+            margin: 0;
+            padding: 0;
+            width: 30px;
+            height: 15px;
+        }
+
+        .navbar .image-buttons a::after {
+            display: none;
+        }
+
+        .navbar-large {
+            background-color: #6AA84F;
+            overflow: visible; /* Asegurarse de que el overflow sea visible */
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+            z-index: 999; /* Asegurar que el navbar esté por encima de otros elementos */
+        }
+
+        .navbar-large a {
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .navbar-large img {
+            width: 160px;
+            height: auto;
+            transform: translateY(5%);
+        }
+
+        .navbar-large a:hover {
+            background-color: #38761D;
+            color: white;
+        }
+
+        /* Estilos del dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #6AA84F;
+    min-width: 160px;
+    top: 150%; 
+    left: 0;
+    z-index: 1000; 
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Evitar interacción al hacer clic */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Permitir interacción al pasar el ratón */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.dropdown-content a:hover {
+    background-color: #38761D;
+}
+
+/* Flecha hacia abajo creada con CSS */
+.dropdown-button::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid white; /* Línea izquierda de la flecha */
+    border-bottom: 2px solid white; /* Línea inferior de la flecha */
+    transform: rotate(-45deg) translateY(-2px); /* Rotar y subir la flecha */
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-button::after {
+    transform: rotate(135deg) translateY(-2px); /* Gira y sube la flecha al hacer hover */
+}
+
+
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1; /* Asegura que la imagen esté debajo del dropdown */
+        }
+
+        .logo-ajuntament {
+            width: 50px;
+            height: 50px;
+        }
+
+        .image-container {
+            background-color: #77A21F;
+            width: 1050px;
+            height: 230px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px auto;
+            padding: 0;
+        }
+
+        .image-item {
+            text-align: center;
+            width: 30%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            width: 90px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .image-container p {
+            margin-top: 0;
+            color: white;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .image-container p:first-child {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .title-text {
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            text-align: center;
+            color: #77A21F;
+            margin-bottom: 30px; /* Ajustar este valor para controlar el margen */
+        }
+
+        /* Imagen que ocupa todo el ancho de la pantalla */
+        .full-width-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Contenedor para la imagen y los botones */
+        .image-with-buttons {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Botones (imágenes) que estarán encima de la imagen */
+        .image-with-buttons .button {
+            position: absolute;
+            top: 320px; /* Puedes ajustar este valor */
+            width: 300px; /* Ajustar tamaño del botón */
+            height: auto;
+        }
+
+        .button1 {
+            left: 150px;
+        }
+
+        .button2 {
+            right: 400px;
+        }

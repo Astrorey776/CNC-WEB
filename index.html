@@ -4,232 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club de Natació</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #EBFFE4;
-        }
-
-        .navbar {
-            background-color: #C2CB76;
-            overflow: hidden;
-            height: 20px;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar a {
-            font-weight: bold;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 10px 18px;
-            text-decoration: none;
-            font-size: 10px;
-            position: relative;
-        }
-
-        .navbar img {
-            width: 55px;
-            height: 24px;
-            object-fit: contain;
-            vertical-align: middle;
-        }
-
-        .navbar img.google {
-            width: 90px;
-        }
-
-        .navbar a::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 40%;
-            background-color: white;
-            border-radius: 10px;
-        }
-
-        .navbar a:last-child::after {
-            display: none;
-        }
-
-        .navbar a:hover {
-            background-color: #C2CB76;
-            color: white;
-        }
-
-        .navbar a.active {
-            background-color: #1e7e34;
-            color: white;
-        }
-
-        .navbar .image-buttons {
-            margin-left: auto;
-            display: flex;
-            gap: 0;
-        }
-
-        .navbar .image-buttons a {
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar .image-buttons img {
-            margin: 0;
-            padding: 0;
-            width: 30px;
-            height: 15px;
-        }
-
-        .navbar .image-buttons a::after {
-            display: none;
-        }
-
-        .navbar-large {
-            background-color: #6AA84F;
-            overflow: hidden;
-            height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .navbar-large a {
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .navbar-large img {
-            width: 160px;
-            height: auto;
-            transform: translateY(5%);
-        }
-
-        .navbar-large a:hover {
-            background-color: #38761D;
-            color: white;
-        }
-
-        .header-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .logo-ajuntament {
-            width: 50px;
-            height: 50px;
-        }
-
-        .image-container {
-            background-color: #77A21F;
-            width: 1050px;
-            height: 230px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px auto;
-            padding: 0;
-        }
-
-        .image-item {
-            text-align: center;
-            width: 30%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .image-item:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 10px;
-            bottom: 10px;
-            width: 2px;
-            background-color: white;
-            border-radius: 10px;
-        }
-
-        .image-container img {
-            width: 90px;
-            height: auto;
-            margin: 10px 0;
-        }
-
-        .image-container p {
-            margin-top: 0;
-            color: white;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 1.2;
-            text-align: center;
-        }
-
-        .image-container p:first-child {
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .title-text {
-            font-family: 'Roboto', sans-serif;
-            font-size: 40px;
-            text-align: center;
-            color: #77A21F;
-            margin-bottom: 30px; /* Ajustar este valor para controlar el margen */
-        }
-
-        /* Imagen que ocupa todo el ancho de la pantalla */
-        .full-width-image {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Contenedor para la imagen y los botones */
-        .image-with-buttons {
-            position: relative;
-            text-align: center;
-        }
-
-        /* Botones (imágenes) que estarán encima de la imagen */
-        .image-with-buttons .button {
-            position: absolute;
-            top: 320px; /* Puedes ajustar este valor */
-            width: 300px; /* Ajustar tamaño del botón */
-            height: auto;
-        }
-
-        .button1 {
-            left: 150px;
-        }
-
-        .button2 {
-            right: 400px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <!-- Barra de navegación original -->
     <div class="navbar">
-        <a href="#noticies">NOTICIES</a>
-        <a href="#contacte">CONTACTE</a>
-        <a href="#feste-soci">FES-TE SOCI</a>
-        <a href="#faqs">FAQs</a>
+        <a href="Noticies.html">NOTICIES</a>
+        <a href="Contacte.html">CONTACTE</a>
+        <a href="FesteSoci.html">FES-TE SOCI</a>
+        <a href="Faqs.html">FAQs</a>
 
         <a href="https://www.apple.com/es/app-store/" target="_blank">
             <img src="images/APPLE.png" alt="Otro botón">
@@ -254,14 +38,40 @@
         </div>
     </div>
 
-    <!-- Nueva barra de navegación grande -->
+    <!-- Nueva barra de navegación grande con menús desplegables -->
     <div class="navbar-large">
         <a href="#"><img src="images/TituloCNC.png" alt="Logo"></a>
-        <a href="#section1">INICI</a>
-        <a href="#section2">CLUB</a>
-        <a href="#section3">CATEGORIES</a>
-        <a href="#section4">ESCOLA</a>
-        <a href="#section5">SPONSORS</a>
+
+            <a href="#section1">INICI</a>
+       
+
+        <!-- Menú desplegable 2 -->
+        <div class="dropdown">
+            <a href="#section2" class="dropdown-button">CLUB</a>
+            <div class="dropdown-content">
+                <a href="#">Qui som?</a>
+                <a href="#">Zona Socis</a>
+            </div>
+        </div>
+
+        <!-- Menú desplegable 3 -->
+        <div class="dropdown">
+            <a href="#section3" class="dropdown-button">CATEGORIES</a>
+            <div class="dropdown-content">
+                <a href="EquipTecnic.html">Equip Tècnic</a>
+                <a href="EquipPrebenjami.html">Equip Prebenjamí</a>
+                <a href="EquipBenjami.html">Equip Benjamí</a>
+                <a href="EquipAlevi.html">Equip Aleví</a>
+                <a href="EquipInfantil.html">Equip Infantil</a>
+                <a href="EquipJunior.html">Equip Junior</a>
+                <a href="EquipAbsolut.html">Equip Absolut</a>
+                <a href="EquipMaster.html">Equip Màster</a>
+            </div>
+        </div>
+            <a href="Escola.html">ESCOLA</a>       
+            <a href="Sponsors.html">SPONSORS</a>
+   
+
         <a href="https://www.cornella.cat/" target="_blank"><img src="images/LogoAjuntament.png" alt="Logo Ajuntament" class="logo-ajuntament"></a>
     </div>
 
@@ -301,10 +111,40 @@
         <img src="images/GooglePlay_Button.png" alt="Botón 1" class="button button1">
     </a>
 
-    <a href="https://www.apple.com/es/app-store/" target="_blank"></ahref>>
+    <a href="https://www.apple.com/es/app-store/" target="_blank"></a>
         <img src="images/AppleStore_Button.png" alt="Botón 2" class="button button2">
     </a>
     </div>
 
+    <!-- Script para mostrar dropdown al hacer clic -->
+    <script>
+        document.querySelectorAll('.dropdown-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const dropdownContent = this.nextElementSibling;
+    
+                // Cerrar cualquier otro dropdown abierto
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    if (content !== dropdownContent) {
+                        content.style.display = 'none';
+                    }
+                });
+    
+                // Mostrar el dropdown actual
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    
+        // Cerrar el menú si se hace clic fuera
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
+
