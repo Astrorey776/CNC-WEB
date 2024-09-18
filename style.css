@@ -114,8 +114,8 @@
         }
 
         .navbar-large a:hover {
-            background-color: #38761D;
-            color: white;
+            background-color: transparent; /* Evitar que el fondo cambie */
+            color: #154802; /* Cambiar el color del texto a rojo */
         }
 
         /* Estilos del dropdown */
@@ -159,7 +159,8 @@
 }
 
 .dropdown-content a:hover {
-    background-color: #38761D;
+    background-color: transparent; /* Sin cambiar el fondo */
+    color: #0f3800; /* Cambiar el texto a azul */
 }
 
 /* Flecha hacia abajo creada con CSS */
