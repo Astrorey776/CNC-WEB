@@ -270,17 +270,17 @@
         /* Botones (imágenes) que estarán encima de la imagen */
         .image-with-buttons .button {
             position: absolute;
-            top: 320px; /* Puedes ajustar este valor */
-            width: 300px; /* Ajustar tamaño del botón */
-            height: auto;          
+    top: 60%;
+    width: 25%;
+    height: auto;          
         }
 
         .button1 {
-            left: 250px;
+            left: 22%;
         }
 
         .button2 {
-            right: 620px;
+            right: 42%;
         }
 
 /* Estilos para el pie de página */
@@ -446,6 +446,119 @@ textarea#comment.massage-bt::placeholder {
 .send_bt a:hover {
     color: #fefefd;
     background-color: #252f2d;
+}
+
+/* 🔽 ESTILOS RESPONSIVE PARA MÓVILES 🔽 */
+@media (max-width: 768px) {
+    .navbar, .navbar-large {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .navbar a, .navbar-large a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .navbar img,
+    .navbar img.google,
+    .navbar .image-buttons img,
+    .footer-icon {
+        width: 20px !important;
+        height: auto !important;
+    }
+
+    .navbar .image-buttons {
+        justify-content: center;
+    }
+
+    .navbar-large img,
+    .logo-ajuntament {
+        width: 80px;
+        height: auto;
+    }
+
+    .image-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .image-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-item:not(:last-child)::after {
+        display: none;
+    }
+
+    .image-container img {
+        width: 60px;
+    }
+
+    .image-container p {
+        font-size: 14px;
+    }
+
+    .title-text {
+        font-size: 24px;
+    }
+
+    .image-with-buttons {
+        position: relative;
+        padding-bottom: 1%; /* espacio para los botones */
+    }
+
+    .image-with-buttons .button1 {
+        position: absolute;
+        width: 22%;
+        left: 25%;
+        top: 53%;
+        transform: translateX(-50%);
+    }
+    .image-with-buttons .button2 {
+        position: absolute;
+        width: 22%;
+        left: 51%;
+        top: 53%;
+        transform: translateX(-50%);
+    }
+
+    .button1 {
+        top: 85%;
+    }
+
+    .button2 {
+        top: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .mail_section_1 {
+        width: 90%;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: auto;
+    }
 }
 
 
