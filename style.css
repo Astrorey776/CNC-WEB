@@ -448,8 +448,60 @@ textarea#comment.massage-bt::placeholder {
     background-color: #252f2d;
 }
 
+/* Oculta el menú y el botón de hamburguesa por defecto */
+.mobile-menu,
+.mobile-menu-toggle {
+    display: none;
+}
+
 /* 🔽 ESTILOS RESPONSIVE PARA MÓVILES 🔽 */
 @media (max-width: 768px) {
+
+    .mobile-menu img {
+        width: 80px;
+        height: auto;
+        margin: 0px auto;
+        display:inline;
+    }
+
+    /* Apple más pequeño */
+.mobile-menu img:not(.google) {
+    width: 50px;
+}
+/* Google más grande */
+.mobile-menu img.google {
+    width: 80px;
+}
+    
+
+    .mobile-menu-toggle {
+        display: block;
+        background-color: #6AA84F;
+        color: white;
+        font-size: 24px;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-align: right;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #C2CB76;
+        padding: 10px;
+    }
+
+    .mobile-menu a {
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    .navbar {
+        display: none;
+    }
     .navbar, .navbar-large {
         flex-direction: column;
         align-items: center;
@@ -549,6 +601,7 @@ textarea#comment.massage-bt::placeholder {
 
     .social-icons {
         justify-content: center;
+
     }
 
     .mail_section_1 {

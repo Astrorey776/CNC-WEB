@@ -8,6 +8,24 @@
 </head>
 
 <body>
+    <!-- Botón hamburguesa solo visible en móvil -->
+<div class="mobile-menu-toggle">
+    ☰
+  </div>
+  
+  <!-- Menú móvil oculto por defecto -->
+  <div class="mobile-menu">
+      <a href="Noticies.html">NOTICIES</a>
+      <a href="Contacte.html">CONTACTE</a>
+      <a href="FesteSoci.html">FES-TE SOCI</a>
+      <a href="Faqs.html">FAQs</a>
+      <a href="https://apps.apple.com/es/app/cn-cornell%C3%A0/id6737766358" target="_blank">
+          <img src="images/APPLE.png" alt="App Store">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.cncornellaapp.flutterbase&pcampaignid=web_share" target="_blank">
+          <img src="images/google.png" alt="Google Play" class="google">
+      </a>
+  </div>
     <!-- Barra de navegación original -->
     <div class="navbar">
         <a href="Noticies.html">NOTICIES</a>
@@ -157,6 +175,13 @@
 
     <!-- Script para mostrar dropdown al hacer clic -->
     <script>
+
+const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('.mobile-menu');
+
+    toggle.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
         document.querySelectorAll('.dropdown-button').forEach(button => {
             button.addEventListener('click', function(event) {
                 event.preventDefault();
