@@ -22,6 +22,34 @@
   
   <!-- Menú móvil oculto por defecto -->
   <div class="mobile-menu">
+    <a href="index.html">INICI</a>
+
+<!-- CLUB (dropdown no posible por ahora en mobile) -->
+<div class="mobile-dropdown">
+    <div class="mobile-dropdown-button">CLUB</div>
+    <div class="mobile-dropdown-content">
+      <a href="QuiSom.html">Qui som?</a>
+      <a href="ZonaSocis.html">Zona Socis</a>
+    </div>
+  </div>
+
+<!-- CATEGORIES -->
+<div class="mobile-dropdown">
+    <div class="mobile-dropdown-button">CATEGORIES</div>
+    <div class="mobile-dropdown-content">
+      <a href="EquipTecnic.html">Equip Tècnic</a>
+      <a href="EquipPrebenjami.html">Equip Prebenjamí</a>
+      <a href="EquipBenjami.html">Equip Benjamí</a>
+      <a href="EquipAlevi.html">Equip Aleví</a>
+      <a href="EquipInfantil.html">Equip Infantil</a>
+      <a href="EquipJunior.html">Equip Junior</a>
+      <a href="EquipAbsolut.html">Equip Absolut</a>
+      <a href="EquipMaster.html">Equip Màster</a>
+    </div>
+  </div>
+
+<a href="Escola.html">ESCOLA</a>
+<a href="Sponsors.html">SPONSORS</a>
       <a href="Noticies.html">NOTICIES</a>
       <a href="Contacte.html">CONTACTE</a>
       <a href="FesteSoci.html">FES-TE SOCI</a>
@@ -215,6 +243,22 @@ const toggle = document.querySelector('.mobile-menu-toggle');
                 });
             }
         });
+
+        // Menú desplegable del CLUB en móvil
+document.querySelectorAll('.mobile-dropdown-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isVisible = content.style.display === 'flex';
+        
+        // Cierra todos los dropdowns
+        document.querySelectorAll('.mobile-dropdown-content').forEach(el => el.style.display = 'none');
+
+        // Muestra el que ha sido clicado si estaba oculto
+        if (!isVisible) {
+            content.style.display = 'flex';
+        }
+    });
+});
     </script>
 </body>
 </html>

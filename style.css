@@ -529,14 +529,7 @@ textarea#comment.massage-bt::placeholder {
         display: none;
     }
     .navbar-large {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        white-space: nowrap;
-        height: auto;
-        padding: 10px;
-        gap: 10px;
-        scroll-snap-type: x mandatory;
+        display: none;
     }
     
     .navbar-large a,
@@ -653,6 +646,31 @@ textarea#comment.massage-bt::placeholder {
     iframe {
         width: 100% !important;
         height: auto;
+    }
+
+    .mobile-dropdown {
+        width: 100%;
+    }
+    
+    .mobile-dropdown-button {
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+    }
+    
+    .mobile-dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: #B1C16A;
+    }
+    
+    .mobile-dropdown-content a {
+        padding-left: 20px;
+        font-size: 14px;
+        border-bottom: 1px solid white;
     }
 }
 
