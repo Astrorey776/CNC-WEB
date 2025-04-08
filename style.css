@@ -454,8 +454,29 @@ textarea#comment.massage-bt::placeholder {
     display: none;
 }
 
+.cnc-logo {
+    display: none;
+}
+
 /* 🔽 ESTILOS RESPONSIVE PARA MÓVILES 🔽 */
 @media (max-width: 768px) {
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #6AA84F;
+        padding: 10px 20px;
+    }
+
+    .cnc-logo {
+        display: block;
+    }
+
+    .cnc-logo img {
+        width: 100px;
+        height: auto;
+    }
 
     .mobile-menu img {
         width: 80px;
