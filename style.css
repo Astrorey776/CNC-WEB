@@ -461,6 +461,11 @@ textarea#comment.massage-bt::placeholder {
 /* 🔽 ESTILOS RESPONSIVE PARA MÓVILES 🔽 */
 @media (max-width: 768px) {
 
+    .logo-navbar-large {
+        display: none !important;
+    }
+    
+
     .mobile-header {
         display: flex;
         align-items: center;
