@@ -256,6 +256,42 @@
             margin-bottom: 30px; /* Ajustar este valor para controlar el margen */
         }
 
+.image-container-formulari {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+        .formulari-button {
+    position: absolute;
+    bottom: 12%;
+    right: 83.5%;
+    background-color: #6b892e;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.formulari-button:hover {
+    background-color: #5c7f19;
+}
+
+
+        .title-text-formulari {
+            margin-top: 0%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            color: #77A21F;
+            margin-bottom: 30px; /* Ajustar este valor para controlar el margen */
+        }
+
         /* Imagen que ocupa todo el ancho de la pantalla */
         .full-width-image {
             width: 100%;
