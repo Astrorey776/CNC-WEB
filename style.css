@@ -527,6 +527,14 @@ textarea#comment.massage-bt::placeholder {
         display: none !important;
     }
     
+.formulari-button {
+    bottom: 10%;
+    right: 70% !important;
+    left: 5% !important;
+    font-size: 3px;
+    padding: 2px;
+    background-color: #5c7f19; /* Por ejemplo, otro verde */
+  }
 
     .mobile-header {
         display: flex;
