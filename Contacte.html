@@ -101,6 +101,56 @@
            </div>
         </div>
      </div>
+
+     <!-- Banner de cookies -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#eee;padding:1em;text-align:center;z-index:1000;">
+  Aquest lloc utilitza cookies de tercers per analitzar el trànsit i oferir contingut personalitzat.
+  <a href="/politica-cookies" target="_blank">Més informació</a><br><br>
+  <button onclick="acceptCookies()">Acceptar totes</button>
+  <button onclick="rejectCookies()">Rebutjar</button>
+</div>
+
+<script>
+  // Mostrar el banner si encara no s'ha donat consentiment
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  } else {
+    if (localStorage.getItem('cookieConsent') === 'accepted') {
+      loadThirdPartyScripts();
+    }
+  }
+
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    loadThirdPartyScripts();
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  function loadThirdPartyScripts() {
+    // Exemple: Google Analytics
+    var s1 = document.createElement('script');
+    s1.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X';
+    s1.async = true;
+    document.head.appendChild(s1);
+
+    var s2 = document.createElement('script');
+    s2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXXXX-X');
+    `;
+    document.head.appendChild(s2);
+
+    // Aquí pots afegir altres scripts com Facebook Pixel, TikTok, YouTube, etc.
+  }
+</script>
+
 </body>
 
 <!-- Sección del pie de página -->
